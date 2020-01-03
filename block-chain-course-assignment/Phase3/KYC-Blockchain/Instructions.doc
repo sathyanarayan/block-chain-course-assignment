@@ -1,0 +1,12 @@
+KYC-Blockchain Release 1.0
+1. Init.json file in the same folder contains info of genesis block
+2. First cd <your relative path to reach the KYC-Blockchain Folder>
+3. run geth --datadir ./datadir init ./Init.json
+4. geth --datadir ./datadir/ --networkid 2019 --rpc --rpcport 30303 --allow-insecure-unlock console (this would validate your creating of network)
+5. Unlock you account using personal.unlockAccount(<address>,<password>,0)
+6.start the mining process miner.start
+6. go to KYC-SC folder and run truffle compile
+7.run truffle migrate --network geth
+8.run truffle console --network geth
+9. create an instance let kyc = await KYC.deployed()
+10.now you will be able to access the functions
